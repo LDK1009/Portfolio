@@ -18,6 +18,7 @@ export default Main;
 
 const Container = styled.div`
   height: 100vh;
+  width: 100vw;
   overflow: auto;
   overflow-x: hidden; // x축 스크롤바를 숨깁니다
   scroll-snap-type: y mandatory;
