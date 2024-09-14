@@ -1,14 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 import theme from "../../theme";
+import { motion } from "framer-motion";
 
 const CardButton = ({ src, url, text, style }) => {
   return (
     <>
-      <Container style={style}>
-        <img src={src} alt="깃허브" />
-        <Text>{text}</Text>
-      </Container>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.2 }}
+        whileHover={{ scale: 1.1 }}
+      >
+        <Container style={style} onClick={() => window.open(`${url}`, "_blank")}>
+          <img src={src} alt={text} />
+          <Text>{text}</Text>
+        </Container>
+      </motion.div>
     </>
   );
 };
@@ -20,15 +28,19 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 4px solid white;
+  border-width:8px;
+  border-style:solid;
+  border-color:${theme.color.contentColor};
   border-radius: 20px;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
+  &:hover {
+    cursor: pointer;
+  }
 `;
-const Logo = styled.img``;
 
 const Text = styled.div`
   font-size: ${theme.fontSize.title.mid};
   font-weight: bold;
-  color: white;
+  color: ${theme.color.contentColor};
 `;

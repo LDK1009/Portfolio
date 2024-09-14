@@ -6,19 +6,30 @@ import profileSrc from "../../assets/랫서팬더.png";
 import githubSvg from "../../assets/깃허브.svg";
 import blogSvg from "../../assets/블로그.svg";
 import CardButton from "./CardButton";
+import ResumeButton from "./ResumeButton";
+import Background from "./Background";
 
 const Page1 = () => {
   return (
     <>
       <Container>
-        <FlexBox>
-          <IntroText />
+        <Background />
+        <ProfileWrap>
+          <div>
+            <IntroText />
+            <ResumeButton />
+          </div>
           <Pofile src={profileSrc} alt="프로필" />
-        </FlexBox>
-        <FlexBox style={{ marginTop: "100px" }}>
-          <CardButton src={githubSvg} text={"Github"} style={{ marginRight: "200px" }} />
-          <CardButton src={blogSvg} text={"Blog"} />
-        </FlexBox>
+        </ProfileWrap>
+        <CardButtonWrap>
+          <CardButton
+            src={githubSvg}
+            text={"Github"}
+            style={{ marginRight: "200px" }}
+            url={"https://github.com/LDK1009"}
+          />
+          <CardButton src={blogSvg} text={"Blog"} url={"https://sooncoding.tistory.com/"} />
+        </CardButtonWrap>
       </Container>
     </>
   );
@@ -26,23 +37,29 @@ const Page1 = () => {
 
 export default Page1;
 
+
 const Container = styled.div`
+  position: relative;
   height: 100vh;
-  background-color: ${theme.color.mainColor};
+  background-color: ${theme.color.backgroundColor};
   scroll-snap-align: center;
   padding: 40px;
-  padding-top: 100px;
+  padding-top: 80px;
 `;
 
-const FlexBox = styled.div`
+const ProfileWrap = styled.div`
   display: flex;
   justify-content: center;
+  margin-bottom: 120px;
 `;
 
+const CardButtonWrap = styled(ProfileWrap)`
+  margin-bottom: 0px;
+`;
 const Pofile = styled.img`
-  width: 240px;
-  height: 240px;
+  width: 300px;
+  height: 300px;
   border-radius: 100%;
-  background-color: white;
+  background-color: ${theme.color.contentColor};
   margin-left: 200px;
 `;
