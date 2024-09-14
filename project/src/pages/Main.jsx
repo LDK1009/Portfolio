@@ -2,13 +2,14 @@ import React from "react";
 import Page1 from "../components/main/Page1";
 import styled from "styled-components";
 import theme from "../theme";
+import Page2 from "../components/main/Page2";
 
 const Main = () => {
   return (
     <>
       <Container>
         <Page1 />
-        <Page1 />
+        <Page2 />
       </Container>
     </>
   );
