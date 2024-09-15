@@ -1,17 +1,17 @@
 import React from "react";
 import styled, { css, keyframes } from "styled-components";
-import { ReactComponent as HtmlSvg } from "../../assets/html.svg";
-import { ReactComponent as CssSvg } from "../../assets/css.svg";
-import { ReactComponent as JsSvg } from "../../assets/js.svg";
-import { ReactComponent as TsSvg } from "../../assets/ts.svg";
-import { ReactComponent as ReactSvg } from "../../assets/react.svg";
-import { ReactComponent as NextSvg } from "../../assets/next.svg";
-import { ReactComponent as StyledSvg } from "../../assets/styled-components.svg";
-import { ReactComponent as MuiSvg } from "../../assets/mui.svg";
-import { ReactComponent as FramerSvg } from "../../assets/framer.svg";
-import { ReactComponent as FigmaSvg } from "../../assets/figma.svg";
-import { ReactComponent as FirebaseSvg } from "../../assets/firebase.svg";
-import { ReactComponent as VerceltSvg } from "../../assets/vercel.svg";
+import { ReactComponent as HtmlSvg } from "../../assets/programing/html.svg";
+import { ReactComponent as CssSvg } from "../../assets/programing/css.svg";
+import { ReactComponent as JsSvg } from "../../assets/programing/js.svg";
+import { ReactComponent as TsSvg } from "../../assets/programing/ts.svg";
+import { ReactComponent as ReactSvg } from "../../assets/programing/react.svg";
+import { ReactComponent as NextSvg } from "../../assets/programing/next.svg";
+import { ReactComponent as StyledSvg } from "../../assets/programing/styled-components.svg";
+import { ReactComponent as MuiSvg } from "../../assets/programing/mui.svg";
+import { ReactComponent as FramerSvg } from "../../assets/programing/framer.svg";
+import { ReactComponent as FigmaSvg } from "../../assets/programing/figma.svg";
+import { ReactComponent as FirebaseSvg } from "../../assets/programing/firebase.svg";
+import { ReactComponent as VerceltSvg } from "../../assets/programing/vercel.svg";
 
 const Background = () => {
   const compObj = {
