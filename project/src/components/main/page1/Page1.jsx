@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import theme from "../../theme";
+import theme from "../../../theme";
 import IntroText from "./IntroText";
-import profileSrc from "../../assets/랫서팬더.png";
-import githubSvg from "../../assets/깃허브.svg";
-import blogSvg from "../../assets/블로그.svg";
+import profileSrc from "../../../assets/랫서팬더.png";
+import githubSvg from "../../../assets/깃허브.svg";
+import blogSvg from "../../../assets/블로그.svg";
 import CardButton from "./CardButton";
 import ResumeButton from "./ResumeButton";
-import Background from "./Background";
+import Background from "../Background";
 
 const Page1 = () => {
   return (

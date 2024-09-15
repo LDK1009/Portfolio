@@ -1,5 +1,5 @@
 import React from "react";
-import Page1 from "../components/main/Page1";
+import Page1 from "../components/main/page1/Page1";
 import styled from "styled-components";
 import theme from "../theme";
 import Page2 from "../components/main/Page2";

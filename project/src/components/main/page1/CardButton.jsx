@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import theme from "../../theme";
+import theme from "../../../theme";
 import { motion } from "framer-motion";
 
 const CardButton = ({ src, url, text, style }) => {
@@ -43,4 +43,5 @@ const Text = styled.div`
   font-size: ${theme.fontSize.title.mid};
   font-weight: bold;
   color: ${theme.color.contentColor};
+  margin-top:12px;
 `;
