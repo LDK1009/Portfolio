@@ -2,7 +2,14 @@ import React, { useEffect, useState } from "react";
 import styled, { css } from "styled-components";
 import theme from "../../../theme";
 import { AnimatePresence, motion, useInView } from "framer-motion";
+import { ReactComponent as HandSvg } from "../../../assets/hand.svg";
+import { ReactComponent as FlaskSvg } from "../../../assets/flask.svg";
 import { ReactComponent as IdeaSvg } from "../../../assets/idea.svg";
+import { ReactComponent as CodeSvg } from "../../../assets/code.svg";
+import { ReactComponent as GrassSvg } from "../../../assets/grass.svg";
+import { ReactComponent as WantSvg } from "../../../assets/want.svg";
+import { ReactComponent as StarSvg } from "../../../assets/star.svg";
+import { ReactComponent as ClapSvg } from "../../../assets/clap.svg";
 
 const Page2 = () => {
   // ref를 사용하는 useInView 훅을 통해 요소가 화면에 있는지 감지
@@ -44,14 +51,14 @@ const Page2 = () => {
   });
 
   const contentArr = [
+    <HandIcon />,
+    <FlaskIcon />,
     <IdeaIcon />,
-    <IdeaIcon />,
-    <IdeaIcon />,
-    <IdeaIcon />,
-    <IdeaIcon />,
-    <IdeaIcon />,
-    <IdeaIcon />,
-    <IdeaIcon />,
+    <CodeIcon />,
+    <GrassIcon />,
+    <WantIcon />,
+    <StarIcon />,
+    <ClapIcon />,
   ];
 
   const [contentIndex, setContentIndex] = useState(-1);
@@ -65,7 +72,9 @@ const Page2 = () => {
   }
 
   useEffect(() => {
-    setContentIndex(0); // inView일 때 contentIndex 초기화
+    if (isInView) {
+      setContentIndex(0); // inView일 때 contentIndex 초기화
+    }
   }, [isInView]);
 
   const AnimatedIcon = ({ children }) => {
@@ -75,8 +84,7 @@ const Page2 = () => {
           key={contentIndex} // key가 변경될 때마다 재생성됨
           initial={{ opacity: 0, y: 100 }}
           animate={contentIndex >= 0 && { opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.25, delay: contentIndex === 0 ? 0.5 : 0 }}
+          transition={{ duration: 0.5, delay: contentIndex === 0 ? 0.5 : 0 }}
           onAnimationComplete={handleAnimationComplete}
         >
           {children}
@@ -126,16 +134,47 @@ const IconWrap = styled.div`
   align-items: center;
   justify-content: center;
   height: 640px;
-  width: 600px;
+  width: 800px;
 `;
 
 // 공통 스타일 정의
 const iconStyle = css`
-  width: 100px;
-  height: 100px;
+  width: 400px;
+  height: 400px;
   fill: ${theme.color.mainColor};
+  stroke : ${theme.color.mainColor};
 `;
 
+const HandIcon = styled(HandSvg)`
+  ${iconStyle}
+`;
+const FlaskIcon = styled(FlaskSvg)`
+  ${iconStyle}
+`;
 const IdeaIcon = styled(IdeaSvg)`
   ${iconStyle}
+`;
+const CodeIcon = styled(CodeSvg)`
+  ${iconStyle}
+`;
+const GrassIcon = styled(GrassSvg)`
+  ${iconStyle}
+`;
+const WantIcon = styled(WantSvg)`
+  ${iconStyle}
+  stroke : white;
+  fill : white;
+
+`;
+const StarIcon = styled(StarSvg)`
+  ${iconStyle}
+  stroke : white;
+  fill : white;
+
+`;
+const ClapIcon = styled(ClapSvg)`
+  ${iconStyle}
+  stroke : white;
+  fill : white;
+
 `;
