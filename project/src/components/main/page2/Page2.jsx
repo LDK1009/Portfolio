@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled, { css } from "styled-components";
 import theme from "../../../theme";
-import { AnimatePresence, motion, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { ReactComponent as HandSvg } from "../../../assets/hand.svg";
 import { ReactComponent as FlaskSvg } from "../../../assets/flask.svg";
 import { ReactComponent as IdeaSvg } from "../../../assets/idea.svg";
@@ -142,7 +142,7 @@ const iconStyle = css`
   width: 400px;
   height: 400px;
   fill: ${theme.color.mainColor};
-  stroke : ${theme.color.mainColor};
+  stroke: ${theme.color.mainColor};
 `;
 
 const HandIcon = styled(HandSvg)`
@@ -159,22 +159,20 @@ const CodeIcon = styled(CodeSvg)`
 `;
 const GrassIcon = styled(GrassSvg)`
   ${iconStyle}
+  fill:none;
 `;
 const WantIcon = styled(WantSvg)`
   ${iconStyle}
   stroke : white;
-  fill : white;
-
+  fill: none;
 `;
 const StarIcon = styled(StarSvg)`
   ${iconStyle}
   stroke : white;
-  fill : white;
-
+  fill: none;
 `;
 const ClapIcon = styled(ClapSvg)`
   ${iconStyle}
-  stroke : white;
-  fill : white;
-
+  stroke:none;
+  fill: none;
 `;
