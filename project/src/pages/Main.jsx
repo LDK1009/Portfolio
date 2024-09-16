@@ -3,6 +3,7 @@ import Page1 from "../components/main/page1/Page1";
 import styled from "styled-components";
 import theme from "../theme";
 import Page2 from "../components/main/page2/Page2";
+import Page3 from "../components/main/page3/Page3";
 
 const Main = () => {
   return (
@@ -10,6 +11,7 @@ const Main = () => {
       <Container>
         <Page1 />
         <Page2 />
+        <Page3 />
       </Container>
     </>
   );
