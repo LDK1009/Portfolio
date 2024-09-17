@@ -9,11 +9,20 @@ const Page3 = () => {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true }); // 한번만 트리거되도록 설정
 
-  const HistoryArr = ["성지고", "순천향대", "어디 기업"];
+  const HistoryArr = [
+    { main: "용인 성지고등학교 졸업", sub: "2019.02" },
+    { main: "순천향대학교 입학", sub: "2019.03" },
+    { main: "성적우수상(최우수) 수여", sub: "2020.01" },
+    { main: "대한민국 육군 입대", sub: "2020.04" },
+    { main: "대한민국 육군 병장 만기전역", sub: "2021.10" },
+    { main: "화학과 전과", sub: "2022.02" },
+    { main: "컴퓨터소프트웨어공학과 전과", sub: "2022.07" },
+    { main: "순천향대학교 졸업", sub: "2025.02" },
+  ];
 
   const RenderHistory = HistoryArr.map((item, index) => {
     // 애니메이션 변수 정의
-    const boxVariants = {
+    const animateVariants = {
       hidden: { opacity: 0, y: 30 },
       visible: isInView && {
         opacity: 1,
@@ -25,13 +34,9 @@ const Page3 = () => {
     return (
       <>
         {index % 2 === 0 ? (
-          <LeftHistory initial="hidden" animate="visible" variants={boxVariants}>
-            {item}
-          </LeftHistory>
+          <LeftHistory animateVariants={animateVariants} info={item} direction={"left"}></LeftHistory>
         ) : (
-          <RightHistory initial="hidden" animate="visible" variants={boxVariants}>
-            {item}
-          </RightHistory>
+          <LeftHistory animateVariants={animateVariants} info={item} direction={"right"}></LeftHistory>
         )}
       </>
     );
@@ -52,7 +57,7 @@ export default Page3;
 const Container = styled.div`
   position: relative;
   height: 100vh;
-  background-color: ${theme.color.serveColor2};
+  background-color: ${theme.color.serveColor3};
   scroll-snap-align: center;
   padding: 0px 40px;
   display: flex;

@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
 
-const RightHistory = ({ children }) => {
+const RightHistory = ({ info }) => {
   return (
     <>
-      <Container>{children}</Container>
+      <Container>{info.main}</Container>
     </>
   );
 };
