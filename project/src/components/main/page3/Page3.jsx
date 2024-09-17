@@ -28,7 +28,7 @@ const Page3 = () => {
       visible: isInView && {
         opacity: 1,
         y: 0,
-        transition: { duration: 1, delay: index * 1 + 0.5 }, // 변수로 애니메이션 지속 시간 설정
+        transition: { duration: 0.8, delay: index * 0.8 + 0.5 }, // 변수로 애니메이션 지속 시간 설정
       },
     };
 
