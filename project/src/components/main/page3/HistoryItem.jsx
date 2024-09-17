@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import theme from "../../../theme";
 
-const LeftHistory = ({ info, direction, animateVariants }) => {
+const HistoryItem = ({ info, direction, animateVariants }) => {
   return (
     <>
       <Container direct={direction} initial="hidden" animate="visible" variants={animateVariants}>
@@ -18,7 +18,7 @@ const LeftHistory = ({ info, direction, animateVariants }) => {
   );
 };
 
-export default LeftHistory;
+export default HistoryItem;
 
 const Container = styled(motion.div)`
   display: flex;
