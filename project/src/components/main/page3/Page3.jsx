@@ -10,7 +10,7 @@ const Page3 = () => {
 
   const HistoryArr = [
     { main: "순천향대학교 디스플레이 신소재공학과 입학", sub: "2019.03" },
-    { main: "성적 최우수상 수여", sub: "2020.01" },
+    { main: "성적 최우수상 수상", sub: "2020.01" },
     { main: "대한민국 육군 입대", sub: "2020.04" },
     { main: "대한민국 육군 병장 만기전역", sub: "2021.10" },
     { main: "화학과 전과", sub: "2022.02" },
@@ -58,7 +58,7 @@ export default Page3;
 const Container = styled.div`
   position: relative;
   height: 100vh;
-  background-color: ${theme.color.serveColor3};
+  /* background-color: ${theme.color.serveColor3}; */
   scroll-snap-align: center;
   padding: 0px 40px;
   display: flex;

@@ -51,6 +51,7 @@ const Circle = styled.div`
   height: 30px;
   border: 4px solid ${theme.color.mainColor};
   border-radius: 100%;
-  background-color: ${theme.color.serveColor3};
+  /* background-color: ${theme.color.serveColor3}; */
+  background-color: white;
   transform: ${(props) => (props.direct === "left" ? "translateX(50%)" : "translateX(-50%)")};
 `;

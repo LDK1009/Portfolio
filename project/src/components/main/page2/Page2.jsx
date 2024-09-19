@@ -109,10 +109,9 @@ export default Page2;
 
 const Container = styled.div`
   height: 100vh;
-  background-color: ${theme.color.serveColor3};
+  /* background-color: ${theme.color.serveColor3}; */
   scroll-snap-align: center;
   padding: 40px;
-  padding-top: 80px;
   display: flex;
   align-items: center;
 `;

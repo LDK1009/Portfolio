@@ -4,6 +4,7 @@ import styled from "styled-components";
 import theme from "../theme";
 import Page2 from "../components/main/page2/Page2";
 import Page3 from "../components/main/page3/Page3";
+import Page4 from "../components/main/page4/Page4";
 
 const Main = () => {
   return (
@@ -12,6 +13,7 @@ const Main = () => {
         <Page1 />
         <Page2 />
         <Page3 />
+        <Page4 />
       </Container>
     </>
   );
