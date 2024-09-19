@@ -43,6 +43,7 @@ const Container = styled.div`
 const HeadLine = styled.div`
   font-size: ${theme.fontSize.title.mid};
   font-weight: bold;
+  color:${theme.color.mainColor};
 `;
 
 const Date = styled.div`
