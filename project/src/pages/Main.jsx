@@ -5,6 +5,7 @@ import theme from "../theme";
 import Page2 from "../components/main/page2/Page2";
 import Page3 from "../components/main/page3/Page3";
 import Page4 from "../components/main/page4/Page4";
+import Page5 from "../components/main/page5/Page5";
 
 const Main = () => {
   return (
@@ -14,6 +15,7 @@ const Main = () => {
         <Page2 />
         <Page3 />
         <Page4 />
+        <Page5 />
       </Container>
     </>
   );
