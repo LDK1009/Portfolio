@@ -10,10 +10,10 @@ const ProfileBox = ({ headline, data, viewState }) => {
   const RenderData = data.map((el, index) => {
     const { date, item } = el;
     return (
-      <ItemWrap 
-      initial={{ opacity: 0, y: 30 }} // 시작 시 투명도 0
-      animate={isInView && { opacity: 1, y: 0 }} // 이후 투명도 1로 애니메이션
-      transition={{ duration: 0.3, delay: 0.3 + (0.2 * index) }} // 2초 동안
+      <ItemWrap
+        initial={{ opacity: 0, y: 30 }} // 시작 시 투명도 0
+        animate={isInView && { opacity: 1, y: 0 }} // 이후 투명도 1로 애니메이션
+        transition={{ duration: 0.3, delay: 0.3 + 0.2 * index }} // 2초 동안
       >
         <Date>{date}</Date>
         <Item>{item}</Item>
@@ -43,7 +43,7 @@ const Container = styled.div`
 const HeadLine = styled.div`
   font-size: ${theme.fontSize.title.mid};
   font-weight: bold;
-  color:${theme.color.mainColor};
+  color: ${theme.color.mainColor};
 `;
 
 const Date = styled.div`

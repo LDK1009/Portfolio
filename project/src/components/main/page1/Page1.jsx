@@ -37,7 +37,6 @@ const Page1 = () => {
 
 export default Page1;
 
-
 const Container = styled.div`
   position: relative;
   height: 100vh;

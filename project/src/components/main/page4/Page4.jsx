@@ -2,10 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import Experience from "./Experience";
 import ProfileBox from "./ProfileBox";
-import { useInView } from "framer-motion";
 
 const Page4 = () => {
-
   const ExperienceData = [
     {
       label: "건솔루션",
@@ -75,7 +73,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-  width:100vw;
+  width: 100vw;
   scroll-snap-align: center;
   padding: 0px 40px;
 `;

@@ -28,9 +28,9 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-width:8px;
-  border-style:solid;
-  border-color:${theme.color.contentColor};
+  border-width: 8px;
+  border-style: solid;
+  border-color: ${theme.color.contentColor};
   border-radius: 20px;
   width: 250px;
   height: 250px;
@@ -43,5 +43,5 @@ const Text = styled.div`
   font-size: ${theme.fontSize.title.mid};
   font-weight: bold;
   color: ${theme.color.contentColor};
-  margin-top:12px;
+  margin-top: 12px;
 `;
