@@ -79,6 +79,7 @@ const Label = styled.div`
 
 const Item = styled(motion.li)`
   font-size: ${theme.fontSize.text.large};
+  margin-bottom: 20px;
 `;
 
 const Date = styled.div`
