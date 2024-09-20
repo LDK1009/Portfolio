@@ -13,10 +13,8 @@ import nodeSrc from "../../../assets/skill/node.png";
 import expressSrc from "../../../assets/skill/express.png";
 import firebaseSrc from "../../../assets/skill/firebase.png";
 import supabaseSrc from "../../../assets/skill/supabase.png";
-import notionSrc from "../../../assets/skill/notion.png";
-import figmaSrc from "../../../assets/skill/figma.png";
-import discordSrc from "../../../assets/skill/discord.png";
 import SkillBox from "./SkillBox";
+import Etc from "./Etc";
 
 const Page5 = () => {
   // const imgSrcArr = [
@@ -38,7 +36,7 @@ const Page5 = () => {
   //   discordSrc,
   // ];
 
-  const FeImgSrcObj = [
+  const FeImgSrcArr = [
     { label: "HTML", src: htmlSrc },
     { label: "CSS", src: cssSrc },
     { label: "Javascript", src: jsSrc },
@@ -52,21 +50,21 @@ const Page5 = () => {
     { label: "framer-motion", src: framerSrc },
   ];
 
-  const BeImgSrcObj = [
+  const BeImgSrcArr = [
     { label: "Node.js", src: nodeSrc },
     { label: "Express.js", src: expressSrc },
     { label: "Firebase", src: firebaseSrc },
     { label: "Supabase", src: supabaseSrc },
   ];
-  
 
   return (
     <>
       <Container>
         <FeBeContainer>
-          <SkillBox headLine={"Frontend"} data={FeImgSrcObj} />
-          <SkillBox headLine={"Backend"} data={BeImgSrcObj} />
+          <SkillBox headLine={"Frontend"} data={FeImgSrcArr} />
+          <SkillBox headLine={"Backend"} data={BeImgSrcArr} />
         </FeBeContainer>
+        <Etc />
       </Container>
     </>
   );
@@ -77,6 +75,7 @@ export default Page5;
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
   height: 100vh;
   width: 100vw;
@@ -85,5 +84,6 @@ const Container = styled.div`
 
 const FeBeContainer = styled.div`
   display: flex;
+  width: 100%;
   justify-content: space-evenly;
 `;

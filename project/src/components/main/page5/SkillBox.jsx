@@ -13,11 +13,16 @@ const SkillBox = ({ headLine, data }) => {
       <HeadLine>{headLine}</HeadLine>
       <Container ref={ref} headLine={headLine}>
         {data.map((el, index) => {
+          const animationTotalTime = 2.0;
+          const animationDuration = (animationTotalTime / data.length).toFixed(2);
+          const animationDelay = 0.5;
+          const animationTerm = (animationDuration / 2).toFixed(2);
+
           return (
             <GridItem
               initial={{ opacity: 0, y: 30 }}
               animate={isInView && { opacity: 1, y: 0 }}
-              transition={{ duration: 0.2, delay: 0.5 + 0.1 * index }}
+              transition={{ duration: animationDuration, delay: animationDelay + animationTerm * index }}
             >
               {el.src && (
                 <div>
@@ -52,8 +57,8 @@ const Container = styled.div`
   height: 600px;
   padding: 20px;
   border-radius: 20px;
-  background-color: rgb(209, 233, 246, 0.3);
-  /* border: 1px solid black; */
+  border: 4px solid ${theme.color.serveColor3};
+  /* background-color: rgb(209, 233, 246, 0.3); */
   margin-top: 20px;
 `;
 
