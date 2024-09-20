@@ -75,7 +75,6 @@ const Container = styled.div`
   height: 100vh;
   width: 100vw;
   scroll-snap-align: center;
-  padding: 0px 40px;
 `;
 
 const ProfileContainer = styled.div`

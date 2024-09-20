@@ -59,7 +59,6 @@ const Container = styled.div`
 
 const HeadLine = styled.div`
   color: ${theme.color.mainColor};
-
   font-size: ${theme.fontSize.title.mid};
   font-weight: bold;
 `;

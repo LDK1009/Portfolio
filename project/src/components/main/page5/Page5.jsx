@@ -16,33 +16,42 @@ import supabaseSrc from "../../../assets/skill/supabase.png";
 import notionSrc from "../../../assets/skill/notion.png";
 import figmaSrc from "../../../assets/skill/figma.png";
 import discordSrc from "../../../assets/skill/discord.png";
+import SkillBox from "./SkillBox";
+import Be from "./Be";
 
 const Page5 = () => {
-  const imgSrcArr = [
-    htmlSrc,
-    cssSrc,
-    jsSrc,
-    tsSrc,
-    reactSrc,
-    nextSrc,
-    styledSrc,
-    muiSrc,
-    framerSrc,
-    nodeSrc,
-    expressSrc,
-    firebaseSrc,
-    supabaseSrc,
-    notionSrc,
-    figmaSrc,
-    discordSrc,
-  ];
+  // const imgSrcArr = [
+  //   htmlSrc,
+  //   cssSrc,
+  //   jsSrc,
+  //   tsSrc,
+  //   reactSrc,
+  //   nextSrc,
+  //   styledSrc,
+  //   muiSrc,
+  //   framerSrc,
+  //   nodeSrc,
+  //   expressSrc,
+  //   firebaseSrc,
+  //   supabaseSrc,
+  //   notionSrc,
+  //   figmaSrc,
+  //   discordSrc,
+  // ];
+
+  const FeImgSrcArr = [htmlSrc, cssSrc, jsSrc, tsSrc, reactSrc, nextSrc, null, null, styledSrc, muiSrc, framerSrc];
+  const BeImgSrcArr = [nodeSrc, expressSrc, firebaseSrc, supabaseSrc ];
 
   return (
     <>
       <Container>
-        {imgSrcArr.map((el) => {
+        {/* {imgSrcArr.map((el) => {
           return <img src={el} width="50px" height="50px"/>;
-        })}
+        })} */}
+        <FeBeContainer>
+          <SkillBox headLine={"Frontend"} data={FeImgSrcArr} />
+          <SkillBox headLine={"Backend"} data={BeImgSrcArr} />
+        </FeBeContainer>
       </Container>
     </>
   );
@@ -51,8 +60,15 @@ const Page5 = () => {
 export default Page5;
 
 const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 100vh;
   width: 100vw;
   scroll-snap-align: center;
-  padding: 0px 40px;
+`;
+
+const FeBeContainer = styled.div`
+  display: flex;
+  justify-content: space-evenly;
 `;
