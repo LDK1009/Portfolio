@@ -19,8 +19,12 @@ const SkillBox = ({ headLine, data }) => {
               animate={isInView && { opacity: 1, y: 0 }}
               transition={{ duration: 0.2, delay: 0.5 + 0.1 * index }}
             >
-              {el && <Img src={el} alt="img" size={imgSize} />}
-              {}
+              {el.src && (
+                <div>
+                  <Img src={el.src} alt="img" size={imgSize} />
+                  <Label width={imgSize}>{el.label}</Label>
+                </div>
+              )}
             </GridItem>
           );
         })}
@@ -62,4 +66,12 @@ const GridItem = styled(motion.div)`
 const Img = styled.img`
   width: ${(props) => props.size || null};
   height: ${(props) => props.size || null};
+`;
+
+const Label = styled.div`
+  font-size: ${theme.fontSize.text.main};
+  font-weight: bold;
+  width: ${(props) => props.width || null};
+  text-align: center;
+  margin-top: 10px;
 `;

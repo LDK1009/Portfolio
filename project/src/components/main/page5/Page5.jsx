@@ -17,7 +17,6 @@ import notionSrc from "../../../assets/skill/notion.png";
 import figmaSrc from "../../../assets/skill/figma.png";
 import discordSrc from "../../../assets/skill/discord.png";
 import SkillBox from "./SkillBox";
-import Be from "./Be";
 
 const Page5 = () => {
   // const imgSrcArr = [
@@ -39,18 +38,34 @@ const Page5 = () => {
   //   discordSrc,
   // ];
 
-  const FeImgSrcArr = [htmlSrc, cssSrc, jsSrc, tsSrc, reactSrc, nextSrc, null, null, styledSrc, muiSrc, framerSrc];
-  const BeImgSrcArr = [nodeSrc, expressSrc, firebaseSrc, supabaseSrc ];
+  const FeImgSrcObj = [
+    { label: "HTML", src: htmlSrc },
+    { label: "CSS", src: cssSrc },
+    { label: "Javascript", src: jsSrc },
+    { label: "Typescript", src: tsSrc },
+    { label: "React", src: reactSrc },
+    { label: "Next.js", src: nextSrc },
+    { label: null, src: null },
+    { label: null, src: null },
+    { label: "styled-components", src: styledSrc },
+    { label: "MUI", src: muiSrc },
+    { label: "framer-motion", src: framerSrc },
+  ];
+
+  const BeImgSrcObj = [
+    { label: "Node.js", src: nodeSrc },
+    { label: "Express.js", src: expressSrc },
+    { label: "Firebase", src: firebaseSrc },
+    { label: "Supabase", src: supabaseSrc },
+  ];
+  
 
   return (
     <>
       <Container>
-        {/* {imgSrcArr.map((el) => {
-          return <img src={el} width="50px" height="50px"/>;
-        })} */}
         <FeBeContainer>
-          <SkillBox headLine={"Frontend"} data={FeImgSrcArr} />
-          <SkillBox headLine={"Backend"} data={BeImgSrcArr} />
+          <SkillBox headLine={"Frontend"} data={FeImgSrcObj} />
+          <SkillBox headLine={"Backend"} data={BeImgSrcObj} />
         </FeBeContainer>
       </Container>
     </>
