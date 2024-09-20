@@ -42,18 +42,18 @@ const Container = styled.div`
 `;
 
 const HeadLine = styled.div`
-  font-size: ${theme.fontSize.title.mid};
+  font-size: ${theme.fontSize.title.main};
   font-weight: bold;
   color: ${theme.color.mainColor};
 `;
 
 const Date = styled.div`
-  font-size: ${theme.fontSize.text.sub};
+  font-size: ${theme.fontSize.text.main};
   color: #777777;
 `;
 
 const Item = styled.li`
-  font-size: ${theme.fontSize.text.main};
+  font-size: ${theme.fontSize.text.large};
 `;
 
 const ItemWrap = styled(motion.div)`

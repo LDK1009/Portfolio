@@ -5,8 +5,8 @@ const theme = {
     serveColor1: "#4F75FF",
     serveColor2: "#9DBDFF",
     serveColor3: "#D1E9F6",
-    backgroundColor:"#6439FF",
-    contentColor:"white",
+    backgroundColor: "#6439FF",
+    contentColor: "white",
   },
   fontSize: {
     title: {
@@ -15,6 +15,7 @@ const theme = {
       sub: "26px",
     },
     text: {
+      large: "20px",
       main: "16px",
       mid: "14px",
       sub: "12px",

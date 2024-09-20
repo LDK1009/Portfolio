@@ -61,7 +61,7 @@ const Container = styled.div`
 
 const HeadLine = styled.div`
   color: ${theme.color.mainColor};
-  font-size: ${theme.fontSize.title.mid};
+  font-size: ${theme.fontSize.title.main};
   font-weight: bold;
 `;
 
@@ -73,15 +73,15 @@ const LabelDateWrap = styled(motion.div)`
 
 const Label = styled.div`
   margin-right: 10px;
-  font-size: ${theme.fontSize.text.main};
+  font-size: ${theme.fontSize.title.sub};
   font-weight: bold;
 `;
 
-const Date = styled.div`
-  font-size: ${theme.fontSize.text.sub};
-  color: #777777;
+const Item = styled(motion.li)`
+  font-size: ${theme.fontSize.text.large};
 `;
 
-const Item = styled(motion.li)`
+const Date = styled.div`
   font-size: ${theme.fontSize.text.main};
+  color: #777777;
 `;
