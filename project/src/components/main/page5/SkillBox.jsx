@@ -57,8 +57,7 @@ const Container = styled.div`
   height: 600px;
   padding: 20px;
   border-radius: 20px;
-  border: 4px solid ${theme.color.serveColor3};
-  /* background-color: rgb(209, 233, 246, 0.3); */
+  border: 4px solid ${theme.color.serveColor1};
   margin-top: 20px;
 `;
 
