@@ -53,9 +53,7 @@ export default Experience;
 const Container = styled.div`
   width: 800px;
   border-radius: 20px;
-  /* background-color: rgb(209, 233, 246, 0.3); */
-  border: 4px solid ${theme.color.serveColor3};
-
+  border: 4px solid ${theme.color.serveColor1};
   padding: 20px;
 `;
 
@@ -80,6 +78,7 @@ const Label = styled.div`
 const Item = styled(motion.li)`
   font-size: ${theme.fontSize.text.large};
   margin-bottom: 20px;
+  font-weight: bold;
 `;
 
 const Date = styled.div`

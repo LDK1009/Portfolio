@@ -37,7 +37,7 @@ const Container = styled.div`
   width: 800px;
   border-radius: 20px;
   /* background-color: rgb(209, 233, 246, 0.3); */
-  border: 4px solid ${theme.color.serveColor3};
+  border: 4px solid ${theme.color.serveColor1};
   padding: 20px;
 `;
 
@@ -54,6 +54,7 @@ const Date = styled.div`
 
 const Item = styled.li`
   font-size: ${theme.fontSize.text.large};
+  font-weight:bold;
 `;
 
 const ItemWrap = styled(motion.div)`

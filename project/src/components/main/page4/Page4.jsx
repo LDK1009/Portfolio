@@ -80,7 +80,6 @@ const Container = styled.div`
 const ProfileContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
-  /* border: 1px solid gray; */
   height: 800px;
 `;
 
