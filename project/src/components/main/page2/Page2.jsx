@@ -120,7 +120,7 @@ const AnimatedText = styled(motion.div)`
   margin-bottom: 36px;
   font-size: ${theme.fontSize.title.sub};
   line-height: ${theme.lineHeight.title.sub};
-  font-weight: 500;
+  font-weight: bold;
 `;
 
 const SelfIntroduce = styled.div`
@@ -140,8 +140,8 @@ const IconWrap = styled.div`
 const iconStyle = css`
   width: 400px;
   height: 400px;
-  fill: ${theme.color.mainColor};
-  stroke: ${theme.color.mainColor};
+  fill: ${theme.color.serveColor1};
+  stroke: ${theme.color.serveColor1};
 `;
 
 const HandIcon = styled(HandSvg)`

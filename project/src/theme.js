@@ -1,10 +1,10 @@
 // 테마 정의
 const theme = {
   color: {
-    mainColor: "#6439FF",
-    serveColor1: "#4F75FF",
-    serveColor2: "#9DBDFF",
-    serveColor3: "#D1E9F6",
+    mainColor: "#5f33ff",
+    serveColor1: "#8766ff",
+    serveColor2: "#af99ff",
+    serveColor3: "#d7ccff",
     backgroundColor: "#6439FF",
     contentColor: "white",
   },
