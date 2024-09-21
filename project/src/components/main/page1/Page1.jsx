@@ -15,21 +15,19 @@ const Page1 = () => {
       <Container>
         <Background />
         <ProfileWrap>
-          <div>
-            <IntroText />
-            <ResumeButton />
-          </div>
+          {/* 소개글 */}
+          <IntroText />
+          {/* 프로필 이미지 */}
           <Pofile src={profileSrc} alt="프로필" />
         </ProfileWrap>
-        <CardButtonWrap>
-          <CardButton
-            src={githubSvg}
-            text={"Github"}
-            style={{ marginRight: "200px" }}
-            url={"https://github.com/LDK1009"}
-          />
+        <ButtonWrap>
+          {/* 깃허브 버튼 */}
+          <CardButton src={githubSvg} text={"Github"} url={"https://github.com/LDK1009"} />
+          {/* 이력서 다운로드 버튼 */}
+          <ResumeButton />
+          {/* 블로그 버튼 다운로드 버튼 */}
           <CardButton src={blogSvg} text={"Blog"} url={"https://sooncoding.tistory.com/"} />
-        </CardButtonWrap>
+        </ButtonWrap>
       </Container>
     </>
   );
@@ -39,22 +37,29 @@ export default Page1;
 
 const Container = styled.div`
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   background-color: ${theme.color.backgroundColor};
   scroll-snap-align: center;
-  padding: 40px;
-  padding-top: 80px;
 `;
 
 const ProfileWrap = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items:center;
   margin-bottom: 120px;
+  width: 1200px;
 `;
 
-const CardButtonWrap = styled(ProfileWrap)`
+const ButtonWrap = styled(ProfileWrap)`
   margin-bottom: 0px;
+  width: 1200px;
+  justify-content: space-between;
 `;
+
 const Pofile = styled.img`
   width: 300px;
   height: 300px;

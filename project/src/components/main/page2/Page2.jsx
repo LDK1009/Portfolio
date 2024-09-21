@@ -43,7 +43,7 @@ const Page2 = () => {
       <AnimatedText
         initial={{ opacity: 0, y: 30 }}
         animate={isInView && { opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.5 + index * 1.5 }}
+        transition={{ duration: 0.5, delay: 0.5 + index * 1.85 }}
       >
         {el}
       </AnimatedText>

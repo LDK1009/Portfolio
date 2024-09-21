@@ -10,6 +10,7 @@ const theme = {
   },
   fontSize: {
     title: {
+      large: "48px",
       main: "40px",
       mid: "32px",
       sub: "26px",

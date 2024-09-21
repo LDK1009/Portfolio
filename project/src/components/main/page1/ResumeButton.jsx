@@ -1,28 +1,46 @@
 import React from "react";
 import styled from "styled-components";
 import theme from "../../../theme";
+import { motion } from "framer-motion";
+import resumeSvg from "../../../assets/resume.svg";
 
 const ResumeButton = () => {
   return (
     <>
-      <Button onClick={() => window.open("https://chatgpt.com/", "_blank")}>Resume</Button>
+      <Container
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.2 }}
+        whileHover={{ scale: 1.1 }}
+        onClick={() => window.open("https://chatgpt.com/", "_blank")}
+      >
+        <img src={resumeSvg} alt="img" />
+        <Text>Resume</Text>
+      </Container>
     </>
   );
 };
 
 export default ResumeButton;
 
-const Button = styled.button`
-  background-color: ${theme.color.serveColor3};
-  color: ${theme.color.mainColor};
-  font-size: ${theme.fontSize.title.sub};
-  font-weight: bold;
-  width: 300px;
-  height: 50px;
-  border: 0px;
-  border-radius: 12px;
+const Container = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  height: 200px;
+  border: 8px solid ${theme.color.contentColor};
+  border-radius: 20px;
+  margin: 0px 40px;
   &:hover {
     cursor: pointer;
-    opacity: 0.9;
   }
+`;
+
+const Text = styled.div`
+  font-size: ${theme.fontSize.title.mid};
+  font-weight: bold;
+  color: ${theme.color.contentColor};
+  margin-top: 12px;
 `;

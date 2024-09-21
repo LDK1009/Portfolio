@@ -28,12 +28,10 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-width: 8px;
-  border-style: solid;
-  border-color: ${theme.color.contentColor};
+  border : 8px solid ${theme.color.contentColor};
   border-radius: 20px;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   &:hover {
     cursor: pointer;
   }

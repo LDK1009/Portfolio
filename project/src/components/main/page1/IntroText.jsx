@@ -25,9 +25,7 @@ const IntroText = () => {
 export default IntroText;
 
 const TypedText = styled.div`
-  font-size: ${theme.fontSize.title.main};
+  font-size: ${theme.fontSize.title.large};
   font-weight: bold;
   color: ${theme.color.contentColor};
-  width: 500px;
-  height: 280px;
 `;
