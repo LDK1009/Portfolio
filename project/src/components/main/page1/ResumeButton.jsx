@@ -3,8 +3,18 @@ import styled from "styled-components";
 import theme from "../../../theme";
 import { motion } from "framer-motion";
 import resumeSvg from "../../../assets/resume.svg";
+import pdfFile from "../../../assets/example.pdf";
 
 const ResumeButton = () => {
+  const handleDownload = () => {
+    const link = document.createElement("a"); // 링크 태그 생성
+    link.href = pdfFile; // 다운로드할 PDF 파일의 경로 (import된 파일)
+    link.download = "example.pdf"; // 다운로드될 파일 이름
+    document.body.appendChild(link); // 링크 태그를 문서에 추가
+    link.click(); // 링크 클릭
+    document.body.removeChild(link); // 다운로드 후 링크 태그 삭제
+  };
+
   return (
     <>
       <Container
@@ -12,7 +22,7 @@ const ResumeButton = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.2 }}
         whileHover={{ scale: 1.1 }}
-        onClick={() => window.open("https://chatgpt.com/", "_blank")}
+        onClick={handleDownload}
       >
         <img src={resumeSvg} alt="img" />
         <Text>Resume</Text>
