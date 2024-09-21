@@ -24,9 +24,9 @@ const Container = styled(motion.div)`
   display: flex;
   justify-content: ${(props) => (props.direct === "left" ? "end" : "start")};
   align-items: center;
-  margin-right: ${(props) => (props.direct === "left" ? "500px" : "0px")};
-  margin-left: ${(props) => (props.direct === "left" ? "0px" : "500px")};
-  width: 500px;
+  margin-right: ${(props) => (props.direct === "left" ? "600px" : "0px")};
+  margin-left: ${(props) => (props.direct === "left" ? "0px" : "600px")};
+  width: 600px;
   margin-bottom: 40px;
   /* background-color: gray; */
 `;
