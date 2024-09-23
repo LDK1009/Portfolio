@@ -3,13 +3,13 @@ import styled from "styled-components";
 import theme from "../../../theme";
 import { motion } from "framer-motion";
 import resumeSvg from "../../../assets/resume.svg";
-import pdfFile from "../../../assets/이동규 이력서.pdf";
+import pdfFile from "../../../assets/이동규_이력서.pdf";
 
 const ResumeButton = () => {
   const handleDownload = () => {
     const link = document.createElement("a"); // 링크 태그 생성
     link.href = pdfFile; // 다운로드할 PDF 파일의 경로 (import된 파일)
-    link.download = "이동규 이력서.pdf"; // 다운로드될 파일 이름
+    link.download = "이동규_이력서.pdf"; // 다운로드될 파일 이름
     document.body.appendChild(link); // 링크 태그를 문서에 추가
     link.click(); // 링크 클릭
     document.body.removeChild(link); // 다운로드 후 링크 태그 삭제
