@@ -5,7 +5,7 @@ import { motion, useInView } from "framer-motion";
 
 const Experience = ({ data, viewState }) => {
   const ref = React.useRef(null);
-  const isInView = useInView(ref, { once: true }); // 한번만 트리거되도록 설정
+  const isInView = useInView(ref); // 한번만 트리거되도록 설정
 
   const RenderData = data.map((el) => {
     const { label, date, item } = el;
@@ -15,7 +15,6 @@ const Experience = ({ data, viewState }) => {
     return (
       <>
         <LabelDateWrap
-          ref={ref}
           initial={{ opacity: 0, y: 30 }} // 시작 시 투명도 0
           animate={isInView && { opacity: 1, y: 0 }} // 이후 투명도 1로 애니메이션
           transition={{ duration: labelDuration, delay: labelDelay }} // 2초 동안
@@ -41,8 +40,8 @@ const Experience = ({ data, viewState }) => {
   return (
     <>
       <Container>
-        <HeadLine>Experience</HeadLine>
-        {RenderData}
+        <HeadLine ref={ref}>Experience</HeadLine>
+        {isInView && RenderData}
       </Container>
     </>
   );

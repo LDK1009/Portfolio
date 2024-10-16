@@ -5,7 +5,7 @@ import { motion, useInView } from "framer-motion";
 
 const ProfileBox = ({ headline, data, viewState }) => {
   const ref = React.useRef(null);
-  const isInView = useInView(ref, { once: true }); // 한번만 트리거되도록 설정
+  const isInView = useInView(ref); // 한번만 트리거되도록 설정
 
   const RenderData = data.map((el, index) => {
     const { date, item } = el;
@@ -25,7 +25,7 @@ const ProfileBox = ({ headline, data, viewState }) => {
     <>
       <Container>
         <HeadLine ref={ref}>{headline}</HeadLine>
-        <ul>{RenderData}</ul>
+        {isInView && <ul>{RenderData}</ul>}
       </Container>
     </>
   );

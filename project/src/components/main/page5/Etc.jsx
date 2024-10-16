@@ -10,7 +10,7 @@ import { motion, useInView } from "framer-motion";
 
 const Etc = () => {
   const ref = React.useRef(null);
-  const isInView = useInView(ref, { once: true }); // 한번만 트리거되도록 설정
+  const isInView = useInView(ref); // 한번만 트리거되도록 설정
 
   const imgInfoArr = [
     { label: "Git", src: gitSrc },
@@ -18,7 +18,6 @@ const Etc = () => {
     { label: "Jira", src: jiraSrc },
     { label: "Slack", src: slackSrc },
     { label: "Figma", src: figmaSrc },
-    { label: "Discord", src: discordSrc },
   ];
 
   return (
@@ -32,9 +31,10 @@ const Etc = () => {
           const animationTerm = (animationDuration / 2).toFixed(2);
 
           return (
+            isInView && 
             <ItemWrap
               initial={{ opacity: 0, y: 30 }}
-              animate={isInView && { opacity: 1, y: 0 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: animationDuration, delay: animationDelay + animationTerm * index }}
             >
               <Img src={el.src} alt="img" />

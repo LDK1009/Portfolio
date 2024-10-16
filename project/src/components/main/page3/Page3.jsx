@@ -6,7 +6,7 @@ import HistoryItem from "./HistoryItem";
 
 const Page3 = () => {
   const ref = React.useRef(null);
-  const isInView = useInView(ref, { once: true }); // 한번만 트리거되도록 설정
+  const isInView = useInView(ref); // 한번만 트리거되도록 설정
 
   const HistoryArr = [
     { main: "순천향대학교 입학", sub: "2019.03" },
@@ -45,9 +45,9 @@ const Page3 = () => {
 
   return (
     <>
-      <Container ref={ref}>
-        <Line />
-        <HistoryWrap>{RenderHistory}</HistoryWrap>
+      <Container >
+      <Line ref={ref} />
+        {isInView && <HistoryWrap>{RenderHistory}</HistoryWrap>}
       </Container>
     </>
   );
@@ -79,7 +79,7 @@ const Line = styled.hr`
   top: 50%;
   left: 50%; /* left도 50%로 설정 */
   transform: translate(-50%, -50%) rotate(90deg); /* 중앙으로 이동 후 회전 */
-  width: 100vh;
+  width: 95vh;
   height: 5px; /* 선의 두께 설정 */
   background-color: ${theme.color.mainColor}; /* 선의 색상 */
   border: none; /* 기본 테두리 제거 */

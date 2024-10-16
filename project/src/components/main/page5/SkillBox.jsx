@@ -6,7 +6,7 @@ import { motion, useInView } from "framer-motion";
 
 const SkillBox = ({ headLine, data }) => {
   const ref = React.useRef(null);
-  const isInView = useInView(ref, { once: true }); // 한번만 트리거되도록 설정
+  const isInView = useInView(ref); // 한번만 트리거되도록 설정
   const imgSize = headLine === "Frontend" ? "100px" : "120px";
   return (
     <div>
@@ -19,6 +19,7 @@ const SkillBox = ({ headLine, data }) => {
           const animationTerm = (animationDuration / 2).toFixed(2);
 
           return (
+            isInView &&
             <GridItem
               initial={{ opacity: 0, y: 30 }}
               animate={isInView && { opacity: 1, y: 0 }}
