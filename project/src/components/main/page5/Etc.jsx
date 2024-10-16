@@ -3,7 +3,9 @@ import styled from "styled-components";
 import theme from "../../../theme";
 import notionSrc from "../../../assets/skill/notion.png";
 import figmaSrc from "../../../assets/skill/figma.png";
-import discordSrc from "../../../assets/skill/discord.png";
+import gitSrc from "../../../assets/skill/git.png";
+import slackSrc from "../../../assets/skill/slack.png";
+import jiraSrc from "../../../assets/skill/jira.png";
 import { motion, useInView } from "framer-motion";
 
 const Etc = () => {
@@ -11,7 +13,10 @@ const Etc = () => {
   const isInView = useInView(ref, { once: true }); // 한번만 트리거되도록 설정
 
   const imgInfoArr = [
+    { label: "Git", src: gitSrc },
     { label: "Notion", src: notionSrc },
+    { label: "Jira", src: jiraSrc },
+    { label: "Slack", src: slackSrc },
     { label: "Figma", src: figmaSrc },
     { label: "Discord", src: discordSrc },
   ];
